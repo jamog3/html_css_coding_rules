@@ -137,13 +137,13 @@ CSScombを使用し整形する<br>参考：[ルールはこんな感じ](https:
 
 ## 余白
 + 余白のルールを事前にデザイナーなどに確認する
-++ 原則、margin-bottomで頑張る
-+++ デザイン次第ではその限りではない
+  + 原則、margin-bottomで頑張る
+    + デザイン次第ではその限りではない
 
 ## メディアクエリ
 + 数値は変数で管理
 + 1ヶ所にまとめたりせず、各要素に記述していく
-++ そのままだと記述量が増えるのでgulpの[css-mqpacker](https://www.npmjs.com/package/css-mqpacker)などを使い、まとめる
+  + そのままだと記述量が増えるのでgulpの[css-mqpacker](https://www.npmjs.com/package/css-mqpacker)などを使い、まとめる
 ```scss
 // Good
 .hoge {
