@@ -269,6 +269,13 @@ includeやメディアクエリを使用した際に値を上書く場合、不�
 ```
 
 また、clearfixなどは各々のclassにmixinなどで指定していく。
+```scss
+// Good
+.hoge {
+  @include clearfix;
+  display: block;
+}
+```
 ```html
 <!-- Bad -->
 <div class="hoge clearfix">
