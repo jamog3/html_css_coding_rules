@@ -51,6 +51,21 @@ p {
 }
 ```
 
+### class名は色名、サイズなどを直接指定しない
+```scss
+// Good
+.error-text {
+}
+```
+```scss
+// Bad
+.red-text {
+}
+.mb10 {
+  margin-bottom: 10px;
+}
+```
+
 ### タグ名をそのままclass名にしない
 ```scss
 // Good
@@ -197,6 +212,25 @@ CSScombを使用し整形する<br>参考：[ルールはこんな感じ](https:
 ## !important
 よほどのことがない限り、使用禁止
 
+## ショートハンド
+原則、使用を推奨。<br>
+ただし、background-sizeのショートハンドがAndroidの古めの環境では動作しないなど、考慮する必要はある。
+```scss
+// Good
+.hoge {
+  margin: 0 100px 50px;
+}
+```
+```scss
+// Bad
+.hoge {
+  martin-top: 0;
+  margin-right: 100px;
+  margin-bottom: 50px;
+  margin-left: 100px;
+}
+```
+
 ## 値の上書き
 includeやメディアクエリを使用した際に値を上書く場合、不必要な箇所まで指定しない
 ```scss
@@ -220,7 +254,7 @@ includeやメディアクエリを使用した際に値を上書く場合、不�
 ```
 
 ## マルチクラス
-基本的に使用禁止
+基本的に使用禁止。
 ```scss
 // Good
 .foo {
@@ -230,9 +264,14 @@ includeやメディアクエリを使用した際に値を上書く場合、不�
 ```
 ```scss
 // Bad
-.foo .bar {
+.foo.bar {
 }
 ```
 
-
-
+また、clearfixなどは各々のclassにmixinなどで指定していく。
+```html
+<!-- Bad -->
+<div class="hoge clearfix">
+  <p>hoge</p>
+</div>
+```
