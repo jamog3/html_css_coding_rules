@@ -81,6 +81,27 @@ p {
 }
 ```
 
+### 抽象的なclass名にしない
+可能な限り、意味が伝わるようなclass名にする<br>
+また、安易に連番を用いない
+```scss
+// Bad
+.section01 {
+}
+.section02 {
+}
+```
+
+### レイアウトに関連するclass名にしない
+PCでは左右、SPでは上下になることもあるため
+```scss
+// Bad
+.hoge-left {
+}
+.hoge-right {
+}
+```
+
 ### 単語を省略しない
 ```scss
 // Good
@@ -224,7 +245,7 @@ CSScombを使用し整形する<br>参考：[ルールはこんな感じ](https:
 ```scss
 // Bad
 .hoge {
-  martin-top: 0;
+  margin-top: 0;
   margin-right: 100px;
   margin-bottom: 50px;
   margin-left: 100px;
