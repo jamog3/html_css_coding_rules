@@ -75,8 +75,8 @@ HTML5のコンテンツ・モデルの仕様に沿ったコードを書くため
   <meta name="description" content="概要">
   <meta name="format-detection" content="telephone=no, address=no, email=no">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <link rel="icon" href="/favicon.ico">
-  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">  
+  <link rel="icon" type="image/png" href="/favicon.png" sizes="32x32">
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
   <link rel="stylesheet" href="/style.css">
 </head>
 ```
@@ -121,7 +121,7 @@ Facebook
 <meta property="og:site_name" content="hoge">
 ```
 
-## タグの意味(セマンティック)を考えて使用する。SEOも意識する。
+## タグの意味を考えて使用する。SEOも意識する。
 
 例えば、imgタグを使用する場合、その画像に意味があるかを判断。<br>もし、装飾目的の場合は、cssで背景画像として扱う。
 
